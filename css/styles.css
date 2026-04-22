@@ -17,18 +17,21 @@ img {
 }
 
 .container {
-  max-width: 100%;
+  width: 100%;
   padding: 0 16px;
   margin: 0 auto;
 }
+
 @media (min-width: 768px) {
   .container {
-    max-width: 768px;
+    padding: 0 32px;
   }
 }
+
 @media (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding: 0 16px;
   }
 }
 h1, h2, h3, h4, h5, h6, p {
@@ -53,6 +56,7 @@ ul {
 
 .header-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -61,7 +65,17 @@ ul {
     gap: 40px;
     padding: 0;
 }
+.nav-list,
+.contacts-list {
+  display: none;
+}
 
+@media (min-width: 768px) {
+  .nav-list,
+  .contacts-list {
+    display: flex;
+  }
+}
 .contacts {
     margin-left: auto;
 }
@@ -137,7 +151,35 @@ ul {
     font-size: 16px;
   }
 }
+.burger-btn {
+  background: none;
+  border: none;
+  display: block;
+  margin-left: auto;
+}
 
+@media (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-list,
+  .contacts-list {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 112px 0;
+  }
+}
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+  }
+}
 .contacts-link:hover,
 .contacts-link:focus {
     color: #404bbf;
@@ -270,11 +312,17 @@ ul {
     letter-spacing: 0.02em;
     color: #434455;
 }
+@media (min-width: 768px) {
+  .features-text {
+    text-align: left;
+  }
+}
 @media (min-width: 1158px) {
   .features-text {
     text-align: left;
   }
 }
+
 .features-icon {
     display: none;
     align-items: center;
@@ -315,6 +363,7 @@ ul {
   }
 }
 .team-item {
+    width: 100%;
     background-color: #ffffff;
     text-align: center;
     border-radius: 0 0 4px 4px;
@@ -453,7 +502,12 @@ ul {
   display: flex;
   align-items: baseline;
 }
-
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 72px;
+  }
+}
 .footer-info {
   margin-right: 120px;
 }
@@ -920,4 +974,14 @@ ul {
   .portfolio-item {
     width: calc((100% - 48px) / 3);
   }
+}
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background: transparent;
+}
+.mobile-menu {
+  z-index: 999;
 }
