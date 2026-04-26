@@ -17,15 +17,18 @@ img {
 }
 
 .container {
-  width: 100%;
+  max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
+
 @media (min-width: 768px) {
   .container {
-    padding: 0 32px;
+    max-width: 768px;
+    padding: 0 16px;
   }
 }
+
 @media (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -121,7 +124,6 @@ ul {
 }
 
 .contacts-list {
-  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -238,8 +240,10 @@ ul {
   color: #ffffff;
   letter-spacing: 0.02em;
   text-align: center;
+
   max-width: 216px;
-  margin: 0 auto 24px;
+
+  margin: 0 auto 48px; 
 }
 @media (min-width: 768px) {
   .hero-title {
@@ -288,21 +292,20 @@ ul {
 }
 
 .card-title {
-  font-size: 18px;
   font-weight: 700;
-  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: left;
+  margin-bottom: 8px;
 }
-
 @media (min-width: 768px) {
   .card-title {
-    font-size: 20px;
-    font-weight: 600;
-    text-align: left;
+    font-size: 36px;
   }
 }
-
 @media (min-width: 1158px) {
   .card-title {
+    font-size: 20px;
     font-weight: 500;
   }
 }
@@ -315,8 +318,9 @@ ul {
   }
 }
 .features-list {
-  row-gap: 72px;
-  column-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 @media (min-width: 768px) {
   .features-list {
@@ -325,7 +329,7 @@ ul {
     gap: 72px 24px;
   }
 }
-  @media (min-width: 1158px) {
+@media (min-width: 1158px) {
   .features-list {
     gap: 24px;
   }
@@ -334,18 +338,13 @@ ul {
 .features-item {
     width: 100%;
 }
-
 .features-text {
-  text-align: center;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
-
-@media (min-width: 768px) {
-  .features-text {
-    text-align: left;
-  }
-}
-
 @media (min-width: 1158px) {
   .features-text {
     font-weight: 400;
@@ -513,11 +512,6 @@ ul {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.overlay-text {
-  transform: translateY(100%);
-}
-
 @media (min-width: 1158px) {
   .portfolio-item:hover .overlay-text {
     transform: translateY(0);
@@ -581,14 +575,6 @@ ul {
   text-align: center;
   gap: 72px;
 }
-@media (min-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 72px 24px;
-  }
-}
 @media (min-width: 1158px) {
   .footer-container {
     flex-wrap: nowrap;
@@ -620,7 +606,6 @@ ul {
     text-align: left;
     gap: 72px 24px;
   }
-
   .footer-info,
   .footer-social,
   .footer-subscribe {
@@ -803,7 +788,7 @@ ul {
 }
 @media (min-width: 768px) {
   .modal-container {
-    max-width: 392px;
+    max-width: 408px;
     padding: 72px 24px 24px;
   }
 }
@@ -1001,11 +986,6 @@ ul {
     background-color: #404BBF;
 }
 @media (min-width: 768px) {
-    .features-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
     .features-item {
         width: calc((100% - 24px) / 2);
     }
@@ -1021,6 +1001,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 999;
 
   background-color: #ffffff;
 
@@ -1111,7 +1092,4 @@ ul {
   right: 24px;
   border: none;
   background: transparent;
-}
-.mobile-menu {
-  z-index: 999;
 }
