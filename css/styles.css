@@ -288,8 +288,8 @@ ul {
 }
 
 .card-title {
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
@@ -298,18 +298,36 @@ ul {
 }
 @media (min-width: 1158px) {
   .card-title {
+    font-size: 20px;
+    font-weight: 500;
     text-align: left;
   }
 }
 
 .features {
-    padding: 120px 0;    
+  padding: 96px 0;
 }
-
+@media (min-width: 1158px) {
+  .features {
+    padding: 120px 0;
+  }
+}
 .features-list {
     display: flex;
     flex-direction: column;
+    gap: 72px;
+}
+@media (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+}
+  @media (min-width: 1158px) {
+  .features-list {
     gap: 24px;
+  }
 }
 
 .features-item {
@@ -319,7 +337,7 @@ ul {
 .features-text {
     text-align: center;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
@@ -331,6 +349,7 @@ ul {
 }
 @media (min-width: 1158px) {
   .features-text {
+    font-weight: 400;
     text-align: left;
   }
 }
@@ -352,9 +371,19 @@ ul {
 }
 .team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 0;
+}
+@media (min-width: 768px) {
+  .team {
+    padding: 96px 0;
+  }
 }
 
+@media (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
+}
 .team-title {
     margin-bottom: 72px;
 }
@@ -366,16 +395,19 @@ ul {
 .team-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 72px;
 }
 @media (min-width: 768px) {
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px 24px; 
   }
 }
 .team-item {
-    width: 100%;
+    width: 264px;
+    margin: 0 auto;
     background-color: #ffffff;
     text-align: center;
     border-radius: 0 0 4px 4px;
@@ -392,8 +424,8 @@ ul {
 }
 
 @media (min-width: 1158px) {
-  .team-item {
-    width: calc((100% - 72px) / 4);
+  .team-list {
+    gap: 24px;
   }
 }
 .team-name {
@@ -416,31 +448,55 @@ ul {
 
 
 .portfolio {
-    padding: 120px 0;
+  padding: 96px 0;
 }
 
+@media (min-width: 1158px) {
+  .portfolio {
+    padding: 120px 0;
+  }
+}
 .portfolio-title {
     margin-bottom: 72px;
 }
 
 .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 48px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
 }
 
+@media (min-width: 768px) {
+  .portfolio-list {
+    gap: 72px 24px; 
+  }
+}
+
+@media (min-width: 1158px) {
+  .portfolio-list {
+    gap: 48px 24px; 
+  }
+}
 .portfolio-item {
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-}
-
-.portfolio-item:hover {
-    box-shadow:
+  width: 100%;
+  box-shadow:
     0px 1px 6px rgba(46,47,66,0.08),
     0px 1px 1px rgba(46,47,66,0.16),
     0px 2px 1px rgba(46,47,66,0.08);
 }
+@media (min-width: 1158px) {
+  .portfolio-item {
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
+  .portfolio-item:hover {
+    box-shadow:
+      0px 1px 6px rgba(46,47,66,0.08),
+      0px 1px 1px rgba(46,47,66,0.16),
+      0px 2px 1px rgba(46,47,66,0.08);
+  }
+}
 .portfolio-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -459,10 +515,15 @@ ul {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .overlay-text {
-    transform: translateY(0);
+.overlay-text {
+  transform: translateY(100%);
 }
 
+@media (min-width: 1158px) {
+  .portfolio-item:hover .overlay-text {
+    transform: translateY(0);
+  }
+}
 .portfolio-content-wrapper {
     padding: 32px 16px;
     border: 1px solid #E7E9FC;
@@ -507,23 +568,33 @@ ul {
 .footer {
     background-color: #2E2F42;
     text-align: left;
-    padding: 100px 0;
+    padding: 96px 0;
 }
-
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
-@media (max-width: 767px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 72px;
+@media (min-width: 1158px) {
+  .footer {
+    padding: 100px 0; 
   }
 }
-.footer-info {
-  margin-right: 120px;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
-
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 72px 24px;
+  }
+}
+@media (min-width: 1158px) {
+  .footer-container {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    gap: 0;
+  }
+}
 .footer-logo {
     display: block;
     color: #F4F4FD;
@@ -593,11 +664,6 @@ ul {
 .footer-social .social-link:focus {
     background-color: #31d0aa;
 }
-
-.footer-subscribe {
-  margin-left: auto;
-}
-
 .footer-subscribe-title {
     font-weight: 500;
     font-size: 16px;
@@ -608,12 +674,19 @@ ul {
 }
 
 .footer-form {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-
+@media (min-width: 768px) {
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
 .footer-input {
-    width: 264px;
+    width: 100%;
+    max-width: 264px;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -624,7 +697,6 @@ ul {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #ffffff;
-    
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-input:focus {
@@ -692,9 +764,10 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
+    width: calc(100% - 32px);
+    max-width: 392px;
     min-height: 584px;
-    padding: 72px 24px 24px 24px;
+    padding: 64px 16px 24px 16px;
     background-color: #fcfcfc;
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 
@@ -702,11 +775,16 @@ ul {
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media (min-width: 768px) {
+  .modal-container {
+    width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+}
 .modal-close {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -720,7 +798,12 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
               border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media (min-width: 768px) {
+  .modal-close {
+    top: 24px;
+    right: 24px;
+  }
+}
 .modal-close:hover,
 .modal-close:focus {
   background-color: #404bbf; 
