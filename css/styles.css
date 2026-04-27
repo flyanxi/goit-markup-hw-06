@@ -66,6 +66,17 @@ ul {
     gap: 40px;
     padding: 0;
 }
+@media (min-width: 768px) {
+  .nav-list {
+    margin-left: 120px;
+  }
+}
+
+@media (min-width: 1158px) {
+  .nav-list {
+    margin-left: 76px;
+  }
+}
 .nav-list,
 .contacts-list {
   display: none;
@@ -243,7 +254,7 @@ ul {
 
   max-width: 216px;
 
-  margin: 0 auto 48px; 
+  margin: 0 auto 72px; 
 }
 @media (min-width: 768px) {
   .hero-title {
@@ -295,12 +306,13 @@ ul {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  text-align: left;
+  text-align: center;
   margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .card-title {
     font-size: 36px;
+    text-align: left;
   }
 }
 @media (min-width: 1158px) {
@@ -402,7 +414,7 @@ ul {
   }
 }
 .team-item {
-    width: 100%;
+    width: 264px;
     margin: 0 auto;
     background-color: #ffffff;
     text-align: center;
@@ -577,9 +589,22 @@ ul {
 }
 @media (min-width: 1158px) {
   .footer-container {
+    display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
-    gap: 0;
+    justify-content: space-between;
+  }
+
+  .footer-info {
+    margin-right: 120px;
+  }
+
+  .footer-social {
+    margin-right: 80px;
+  }
+
+  .footer-subscribe {
+    margin-left: auto;
   }
 }
 .footer-logo {
