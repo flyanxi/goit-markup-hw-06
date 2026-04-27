@@ -164,8 +164,8 @@ ul {
 @media (min-width: 768px) {
   .contacts-link {
     font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.02em;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
   }
 }
 @media (min-width: 1158px) {
@@ -194,11 +194,7 @@ ul {
     display: flex;
   }
 }
-@media (min-width: 768px) {
-  .hero {
-    padding: 112px 0;
-  }
-}
+
 .contacts-link:hover,
 .contacts-link:focus {
     color: #404bbf;
@@ -220,6 +216,11 @@ ul {
     margin: 0 auto;
     max-width: 1440px;
     padding: 72px 0;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 112px 0;
+  }
 }
 @media (min-width: 1158px) {
   .hero {
